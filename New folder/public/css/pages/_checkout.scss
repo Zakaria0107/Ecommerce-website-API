@@ -1,0 +1,120 @@
+#checkout {
+    padding: 200px 0;
+    height: 100%;
+    .container {
+        @extend %space_between ;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    h1 {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1.14286px;
+        text-transform: uppercase;
+    }
+    h3 {
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 25px;
+        letter-spacing: 0.928571px;
+        text-transform: uppercase;
+        color: $maroon;
+    }
+    label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.214286px;
+        color: #000000;
+    }
+    input {
+        margin-top: 10px;
+        background: #FFFFFF;
+        border: 1px solid #CFCFCF;
+        border-radius: 8px;
+        transition: all .3s ease-in-out;
+        padding: 18px 24px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.25px;
+        color: #000000;
+        &:focus {
+            outline: none;
+            border-color: $maroon;
+        }
+    }
+    .form_controller {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    #form {
+        width: 70%;
+        background-color: #FFFFFF;
+        padding: 54px 48px;
+        border-radius: 8px;
+    }
+    .billing_details {
+        margin-bottom: 51px;
+    }
+    #checkout_cards {
+        width: 350px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        padding: 32px;
+        .button_1 {
+            width: 100% ;
+        }
+        .card {
+            @extend %space_between ;
+            margin: 31px 0 24px 0 ;
+        }
+        img {
+            width: 64px;
+            height: 64px;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        p {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0.5;
+        }
+        .info {
+            @extend %space_between ; 
+            p {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 25px;
+                color: #000000;
+                opacity: 0.5;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+@media (max-width : 768px) {
+    #checkout .container {
+        flex-direction: column;
+        #form , #checkout_cards {
+            width: 100% !important;
+            padding: 32px;
+        }
+    }
+}

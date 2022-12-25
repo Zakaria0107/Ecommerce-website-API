@@ -1,0 +1,111 @@
+#product_header {
+    padding-top: 200px;
+    .go_back {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        color: #000000;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    .product {
+        margin-top: 50px;
+        .numberCheck {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+        #number {
+            background-color: $gray_1;
+            .btn , span  {
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: 1px;
+                color: #000000;
+            }
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+#features {
+    margin: 160px 0;
+    .container {
+        @extend %space_between ; 
+        align-items: flex-start;
+        .inTheBox {
+            width: 25%;
+        }
+        .features {
+            width: 65%;
+        }
+        h1 {
+            margin-bottom: 32px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: 1.14286px;
+            text-transform: uppercase;
+        }
+        p {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            color: #000000;
+            opacity: 0.5;
+            span {
+                color: $maroon;
+                margin-right: 24px;
+                font-weight: 700;
+                opacity: 1 ;
+            }
+        }
+    }
+}
+.gallery .container{
+    @extend %space_between ;
+    gap: 30px;
+    img {
+        border-radius: 8px;
+        width: 55%;
+        height: 100%;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width : 992px) {
+    #features {
+        .container {
+            flex-direction: column;
+            gap: 120px;
+        }
+        .features , .inTheBox {
+            width: 100% !important;
+        }
+    }
+}
+@media (max-width : 768px) {
+    .gallery .container {
+        flex-direction: column;
+        img  , div {
+            width: 100%;
+        }
+    }
+}
